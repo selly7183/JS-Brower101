@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>토끼를 찾아라</title>
+		<style>
+			body {
+				background-color: #000;
+				text-align: center;
+			}
+			button {
+				outline: none;
+				background-color: crimson;
+				color: #fff;
+				font-size: 32px;
+				margin: 16px 0;
+				margin-bottom: 10px;
+				cursor: pointer;
+			}
+			img {
+				display: block;
+				margin: 0 auto;
+			}
+			button:hover {
+				filter: brightness(130%);
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<button class="findBtn">Find a rabbit 🐰</button>
+			<img src="img/carrot.png" alt="carrot" />
+			<img src="img/carrot.png" alt="carrot" />
+			<img src="img/carrot.png" alt="carrot" />
+			<img src="img/carrot.png" alt="carrot" />
+			<img src="img/carrot.png" alt="carrot" />
+			<img class="rabbit" src="img/rabbit.png" alt="rabbit" />
+			<img src="img/carrot.png" alt="carrot" />
+			<img src="img/carrot.png" alt="carrot" />
+			<img src="img/carrot.png" alt="carrot" />
+			<img src="img/carrot.png" alt="carrot" />
+		</section>
+
+		<script>
+			const findBtn = document.querySelector(".findBtn");
+			const rabbit = document.querySelector(".rabbit");
+
+			findBtn.addEventListener("click", (e) => {
+				rabbit.scrollIntoView({
+					behavior: "smooth",
+					block: "center",
+				});
+			});
+		</script>
+	</body>
+</html>
